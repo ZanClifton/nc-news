@@ -2,6 +2,10 @@
 
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?color=3F9748&lines=Shrelly+Mail+Online)](https://git.io/typing-svg)
 
+## Initial Plan
+
+![Initial Plan](https://github.com/ZanClifton/nc-news/blob/main/src/images/nc-news-initial-2022-04-14-1741.png)
+
 # ![Shrelly Mail Online](https://github.com/ZanClifton/shrelly-mail-api/blob/main/shrelly-mail-online.jpeg)
 
 <div align=right>
