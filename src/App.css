@@ -36,6 +36,24 @@ body {
   border: 3px solid #ee6e19;
 }
 
+.article-head {
+  margin: 10px 0px 10px 0px;
+  padding: 10px;
+  color: #ee6e19;
+}
+
+.article-card {
+  margin: 10px 0px 10px 0px;
+  padding: 10px;
+  color: #ee6e19;
+  border: 3px solid #ee6e19;
+  list-style: none;
+}
+
+
+.Articles {
+  margin: 10px;
+}
 /* palette notes
 #132A13
 #070f07

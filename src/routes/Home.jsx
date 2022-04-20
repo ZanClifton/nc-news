@@ -1,8 +1,10 @@
 import React from "react";
+import { Articles } from "../components/Articles";
 
 export const Home = () => {
-  return <div> 
-      <h2 className="article-list">Articles</h2>
-      </div>
+  return (
+    <div>
+      <Articles />
+    </div>
+  );
 };
-
