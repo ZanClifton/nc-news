@@ -11,9 +11,9 @@ export const Articles = () => {
     });
   }, []);
 
-  return <section className="article-list">
-    <h2 className="article-head">Articles</h2>
-    <ul>
+  return <div className="article-container">
+    <h2 className="article-head">What's New?</h2>
+    <ul className="article-list">
       {articles.map(({ article_id, author, topic, title }) => {
         return (
           <li key={article_id} className="article-card">
@@ -26,5 +26,5 @@ export const Articles = () => {
         )
       })}
     </ul>
-  </section>
+  </div>
 };
