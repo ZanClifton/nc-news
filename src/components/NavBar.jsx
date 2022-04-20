@@ -4,7 +4,14 @@ import React from "react";
 export const NavBar = () => {
   return (
     <nav className="navbar">
-      <h3>Topics | Profile</h3>
+      <h3>Profile</h3>
+      <select
+      name="selector"
+      id=""
+      onChange={(event) => {}}
+      >
+
+      </select>
     </nav>
   )
 }
