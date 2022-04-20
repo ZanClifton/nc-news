@@ -34,6 +34,9 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* background-color: #cbeecb; */
+  border: 0.5px solid #022b028c;
+  box-shadow: 3px 3px #022b028c;
 }
 
 .article-list {
