@@ -70,6 +70,17 @@ body {
   list-style: none;
 }
 
+.card-title a {
+  text-decoration: none;
+  color: #022b02;
+  transition: all .3s ease;
+}
+
+.card-title a:hover {
+  text-decoration: none;
+  color: #077007;
+}
+
 /* palette notes
 #132A13
 #070f07

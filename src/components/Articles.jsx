@@ -1,17 +1,24 @@
 import { useEffect, useState } from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { getArticles } from "../utils/api";
 
 export const Articles = () => {
   const [articles, setArticles] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [err, setErr] = useState(null);
 
   useEffect(() => {
-    getArticles().then((articlesFromApi) => {
-      setArticles(articlesFromApi);
-      setIsLoading(false);
-    });
+    getArticles()
+      .then((articlesFromApi) => {
+        setArticles(articlesFromApi);
+        setIsLoading(false);
+      })
+      .catch((err) => {
+        setErr(err);
+      });
   }, []);
+
+  if (err) return <p>{err}</p>;
 
   if (isLoading)
     return <h2 className="article-head">Fetching the good stuff...</h2>;
@@ -23,7 +30,9 @@ export const Articles = () => {
         {articles.map(({ article_id, author, topic, title }) => {
           return (
             <li key={article_id} className="article-card">
-              <h3>{title}</h3>
+              <h3 className="card-title">
+                <Link to={`/articles/${article_id}`}>{title}</Link>
+              </h3>
               <p>{author}</p>
               <p>{topic}</p>
               {/* <Link to={`/articles/${article_id}`} className="Articles"> */}
