@@ -4,6 +4,7 @@ import { NavBar } from "./components/NavBar";
 import { Home } from "./routes/Home";
 import { Header } from "./components/Header"
 
+
 function App() {
   return (
     <div className="App">
