@@ -18,7 +18,15 @@ export const getArticles = (topic) => {
 };
 
 export const getTopics = () => {
-  return shrellyApi.get("/topics").then(({ data }) => {
+  return shrellyApi.get("/topics")
+  .then(({ data }) => {
     return data.topics;
   });
 };
+
+export const getAnArticle = (article_id) => {
+  return shrellyApi.get(`/articles/${article_id}`)
+  .then(({data}) => {
+    return data.article;
+  })
+}
