@@ -8,14 +8,13 @@ export const Articles = () => {
   const { topic } = useParams();
 
   useEffect(() => {
-    getArticles(topic)
-      .then((articlesFromApi) => {
-        setArticles(articlesFromApi);
-        setErr(null);
-      })
-      .catch((err) => {
-        setErr("Topic not found! 😭");
-      });
+    getArticles(topic).then((articlesFromApi) => {
+      setArticles(articlesFromApi);
+      setErr(null);
+    });
+    // .catch((err) => {
+    //   setErr("Topic not found! 😭");
+    // });
   }, [topic]);
 
   if (err) return <p>{err}</p>;
