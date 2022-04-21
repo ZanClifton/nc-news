@@ -29,6 +29,20 @@ body {
   /* border: 3px solid #720363d3; */
 }
 
+ul li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+.nav-link {
+  padding: 5px 10px 5px 10px;
+  text-decoration: none;
+  color: #022b02;
+  background-color: #ddebdd;
+  border: 0.5px solid #022b028c;
+  box-shadow: 3px 3px #022b028c;
+}
+
 .article-container {
   display: flex;
   flex-direction: column;
