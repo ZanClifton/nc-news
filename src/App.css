@@ -84,6 +84,35 @@ ul li {
   list-style: none;
 }
 
+.card-title a {
+  text-decoration: none;
+  color: #022b02;
+  font-size: 1em;
+  transition: all .3s ease;
+}
+
+.card-title a:hover {
+  text-decoration: none;
+  color: #077007;
+  font-size: 1.005em;
+}
+
+.an-article {
+  gap: 30px;
+  min-width: 500px;
+  /* width: 80%; */
+  padding: 10px;
+  color: #022b02;
+  background-color: #f4f5f4;
+  border: 1px solid #ddebdd;
+  box-shadow: 3px 3px #022b028c;
+}
+
+.an-article-head {
+  margin: 10px 0px 10px 0px;
+  padding: 10px;
+  color: #022b02;
+}
 /* palette notes
 #132A13
 #070f07
