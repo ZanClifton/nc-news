@@ -5,14 +5,19 @@ import { getAnArticle } from "../utils/api";
 export const AnArticle = () => {
   const [article, setArticle] = useState({});
   const { article_id } = useParams();
+  const [err, setErr] = useState(null);
 
   useEffect(() => {
-    getAnArticle(article_id).then((articleFromApi) => {
-      setArticle(articleFromApi);
-    });
+    getAnArticle(article_id)
+      .then((articleFromApi) => {
+        setArticle(articleFromApi);
+      })
+      .catch((err) => {
+        setErr(err);
+      });
   }, [article_id]);
 
-  console.log(article_id, "<< article_id");
+  if (err) return <p>{err}</p>;
 
   return (
     <div className="an-article">

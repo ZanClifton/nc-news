@@ -21,17 +21,27 @@ body {
 }
 
 .navbar {
-  min-width: 500px;
   margin: 10px 0px 10px 0px;
-  /* padding: 10px; */
-  text-align: right;
   color: #022b02;
-  /* border: 3px solid #720363d3; */
+  /* border: 2px solid black */
 }
 
-ul li {
-  display: inline-block;
+.nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-item {
+  margin: 0;
   list-style-type: none;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 .nav-link {
@@ -40,7 +50,13 @@ ul li {
   color: #022b02;
   background-color: #ddebdd;
   border: 0.5px solid #022b028c;
-  box-shadow: 3px 3px #022b028c;
+  box-shadow: 3px 3px /* 15px */ #022b028c;
+  transition: all 0.3s;
+  text-transform: uppercase;
+}
+
+.nav-link:focus {
+  box-shadow: inset 3px 3px /* 15px */ #022b028c;
 }
 
 .article-container {
@@ -88,7 +104,7 @@ ul li {
   text-decoration: none;
   color: #022b02;
   font-size: 1em;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 .card-title a:hover {
@@ -112,6 +128,93 @@ ul li {
   margin: 10px 0px 10px 0px;
   padding: 10px;
   color: #022b02;
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    margin: 0px 25px;
+    width: 250px;
+  }
+
+  * {
+    overflow-x: hidden;
+    max-width: 600px;
+  }
+
+  body {
+    font-size: 10px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+  }
+
+  .App {
+    max-width: 600px;
+  }
+
+  .article-card {
+    max-width: 400px;
+    min-width: 200px;
+  }
+
+  .h1 {
+    max-width: 600px;
+    text-align: left;
+    background: transparent;
+    z-index: -1;
+    overflow: hidden;
+  }
+
+  .navbar {
+    max-width: 600px;
+  }
+
+  .nav-item, .nav-link {
+    position: relative;
+
+  }
+
+  .nav-list {
+    display: block;
+
+    font-size: 4px;
+    max-width: 600px;
+    list-style-type: none;
+    box-shadow: none;
+  }
+
+  .nav-links {
+    gap: 5px;
+    box-shadow: none;
+  }
+
+  .nav-link, li {
+    margin: 0;
+    padding: 1px;
+    border: 0px;
+    box-shadow: none;
+  }
+
+  .nav-link:focus {
+    box-shadow: none;
+  }
+  
+
+  .article-container {
+    max-width: 600px;
+  }
+
+  .article-list {
+    max-width: 600px;
+  }
+
+  .an-article {
+    gap: 30px;
+    max-width: 280px;
+  }
 }
 /* palette notes
 #132A13

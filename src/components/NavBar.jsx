@@ -13,22 +13,24 @@ export const NavBar = () => {
 
   return (
     <nav className="navbar">
-      <ul>
-        <h3>
+      <ul className="nav-list">
+        <div className="h1">
+          <h1>Shrelly Mail Online</h1>
+        </div>
+        <div className="nav-links">
           <Link to="/" className="nav-link">
             HOME
           </Link>
           {topics.map((topic) => {
             return (
-              <li key={topic.slug}>
+              <li className="nav-item" key={topic.slug}>
                 <Link to={`/topics/${topic.slug}`} className="nav-link">
                   {topic.slug}
                 </Link>
               </li>
             );
           })}
-          | My Profile
-        </h3>
+        </div>
       </ul>
     </nav>
   );
