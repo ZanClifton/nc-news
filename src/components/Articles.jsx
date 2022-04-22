@@ -1,22 +1,25 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { getArticles } from "../utils/api";
 
 export const Articles = () => {
   const [articles, setArticles] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [err, setErr] = useState(null);
+  const { topic } = useParams();
 
   useEffect(() => {
-    getArticles()
+    getArticles(topic)
       .then((articlesFromApi) => {
         setArticles(articlesFromApi);
         setIsLoading(false);
+        setErr(null);
       })
       .catch((err) => {
         setErr(err);
       });
-  }, []);
+  }, [topic]);
 
   if (err) return <p>{err}</p>;
 
@@ -35,8 +38,6 @@ export const Articles = () => {
               </h3>
               <p>{author}</p>
               <p>{topic}</p>
-              {/* <Link to={`/articles/${article_id}`} className="Articles"> */}
-              {/* </Link> */}
             </li>
           );
         })}

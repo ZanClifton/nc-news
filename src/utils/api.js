@@ -5,28 +5,25 @@ const shrellyApi = axios.create({
 });
 
 export const getArticles = (topic) => {
-
   return shrellyApi
-  .get("/articles", {
-    params: {
-      topic: topic
-    }
-  })
-  .then(({ data }) => {
-    return data.articles;
-  });
+    .get("/articles", {
+      params: {
+        topic: topic,
+      },
+    })
+    .then(({ data }) => {
+      return data.articles;
+    });
 };
 
 export const getTopics = () => {
-  return shrellyApi.get("/topics")
-  .then(({ data }) => {
+  return shrellyApi.get("/topics").then(({ data }) => {
     return data.topics;
   });
 };
 
 export const getAnArticle = (article_id) => {
-  return shrellyApi.get(`/articles/${article_id}`)
-  .then(({data}) => {
+  return shrellyApi.get(`/articles/${article_id}`).then(({ data }) => {
     return data.article;
-  })
-}
+  });
+};
