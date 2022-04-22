@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getSingleArticle } from "../utils/api";
 import { Onions } from "./Onions";
+import { Comments } from "./Comments";
 
 export const SingleArticle = () => {
   const [article, setArticle] = useState({});
@@ -28,9 +29,10 @@ export const SingleArticle = () => {
   return (
     <div className="an-article">
       <h1 className="an-article-head">{article.title}</h1>
-      <p>{article.author}</p>
-      <p>{article.topic}</p>
-      <p>{article.body}</p>
+      <p className="article-topic">
+        Posted in {article.topic} by {article.author}
+      </p>
+      <p className="article-body">{article.body}</p>
       <div className="article-onions">
         <Onions
           votes={article.votes}
@@ -38,6 +40,9 @@ export const SingleArticle = () => {
           setArticle={setArticle}
           article={article}
         />
+      </div>
+      <div className="comments">
+        <Comments article_id={article_id} />
       </div>
     </div>
   );
