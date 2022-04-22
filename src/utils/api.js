@@ -22,7 +22,7 @@ export const getTopics = () => {
   });
 };
 
-export const getAnArticle = (article_id) => {
+export const getSingleArticle = (article_id) => {
   return shrellyApi.get(`/articles/${article_id}`).then(({ data }) => {
     return data.article;
   });
@@ -30,10 +30,20 @@ export const getAnArticle = (article_id) => {
 
 export const patchOnions = (article_id, increment) => {
   return shrellyApi
-    .patch(`articles/${article_id}`, {
+    .patch(`/articles/${article_id}`, {
       inc_votes: increment
     })
     .then((res) => {
       return res.data;
     });
 };
+
+export const getComments = (article_id) => {
+  return shrellyApi
+  .get(`/articles/${article_id}/comments`)
+  .then(({ data }) => {
+    console.log(data, "<< data")
+    console.log(data.comments, "<< data.data")
+    return data.comments;
+  })
+}

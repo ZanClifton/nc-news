@@ -1,10 +1,10 @@
 import React from "react";
-import { AnArticle } from "../components/AnArticle";
+import { SingleArticle } from "../components/SingleArticle";
 
 export const Article = () => {
   return (
     <div>
-      <AnArticle />
+      <SingleArticle />
     </div>
   );
 };

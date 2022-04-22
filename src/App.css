@@ -1,3 +1,5 @@
+/* PAGE */
+
 * {
   margin: 1%;
   padding: 0;
@@ -9,6 +11,8 @@ body {
   font-family: "Oxygen", sans-serif;
   color: #3b3a37;
 }
+
+/* HEADER */
 
 a {
   text-decoration: none;
@@ -28,6 +32,8 @@ a {
   text-decoration: none;
   color: #077007;
 }
+
+/* NAVBAR */
 
 .navbar {
   margin: 10px 0px 10px 0px;
@@ -74,6 +80,8 @@ a {
   box-shadow: inset 3px 3px /* 15px */ #022b028c;
 }
 
+/* ARTICLES */
+
 .article-container {
   display: flex;
   flex-direction: column;
@@ -115,6 +123,8 @@ a {
   list-style: none;
 }
 
+/* ARTICLE CARDS */
+
 .card-title a {
   text-decoration: none;
   color: #022b02;
@@ -128,6 +138,8 @@ a {
   font-size: 1.005em;
 }
 
+/* SINGLE ARTICLE */
+
 .an-article {
   gap: 30px;
   min-width: 500px;
@@ -140,10 +152,23 @@ a {
 }
 
 .an-article-head {
-  margin: 10px 0px 10px 0px;
-  padding: 10px;
+  margin: 10px 0px 0px 0px;
+  padding: 10px 10px 0px 10px;
   color: #022b02;
 }
+
+.article-topic {
+  margin-top: 0px;
+  margin-left: 0px;
+  padding-left: 10px;
+}
+
+.article-body {
+  
+  border: 1px solid black;
+}
+
+/* VOTES/ONIONS */
 
 .onion-buttons {
   display: flex;
@@ -165,6 +190,42 @@ a {
 .onion-button:hover {
   background-color: #fefffe;
 }
+
+/* COMMENTS */
+
+.comments {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ddebdd;
+
+  /* border: 0.5px solid #022b028c; */
+  box-shadow: 3px 3px #022b028c;
+}
+
+.comments-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 30px;
+  padding: 10px;
+  color: #022b02;
+  background-color: #ddebdd;
+}
+
+.comment-card {
+  width: 50%;
+  padding: 10px;
+  color: #022b02;
+  background-color: #f4f5f4;
+  border: 1px solid #ddebdd;
+  box-shadow: 3px 3px #022b028c;
+  list-style: none;
+}
+
+/* PHONES  */
 
 @media only screen and (max-width: 600px) {
   html {
