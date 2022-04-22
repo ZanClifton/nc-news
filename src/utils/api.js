@@ -27,3 +27,13 @@ export const getAnArticle = (article_id) => {
     return data.article;
   });
 };
+
+export const patchOnions = (article_id, increment) => {
+  return shrellyApi
+    .patch(`articles/${article_id}`, {
+      inc_votes: increment
+    })
+    .then((res) => {
+      return res.data;
+    });
+};

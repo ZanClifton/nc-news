@@ -10,14 +10,23 @@ body {
   color: #3b3a37;
 }
 
-.h1 {
+a {
+  text-decoration: none;
+}
+
+.site-header {
+  font-size: xx-large;
   min-width: 500px;
   margin: 10px 0px 10px 0px;
   padding: 10px;
   background-color: #ddebdd;
+  text-decoration: none;
   color: #022b02;
-  /* border: 3px solid #000000; */
-  /* box-shadow: 3px 6px #132A13; */
+}
+
+.site-header:hover {
+  text-decoration: none;
+  color: #077007;
 }
 
 .navbar {
@@ -53,6 +62,12 @@ body {
   box-shadow: 3px 3px /* 15px */ #022b028c;
   transition: all 0.3s;
   text-transform: uppercase;
+}
+
+.nav-link:hover {
+  color: #022b02;
+  font-size: 1em;
+  transition: all 0.3s ease;
 }
 
 .nav-link:focus {
@@ -130,6 +145,27 @@ body {
   color: #022b02;
 }
 
+.onion-buttons {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.onion-counter {
+  font-size: larger;
+}
+
+.onion-button {
+  padding: 5px;
+  font-weight: bold;
+  background-color: #f4f5f4;
+  box-shadow: 3px 3px #022b028c;
+}
+
+.onion-button:hover {
+  background-color: #fefffe;
+}
+
 @media only screen and (max-width: 600px) {
   html {
     margin: 0px 25px;
@@ -172,9 +208,9 @@ body {
     max-width: 600px;
   }
 
-  .nav-item, .nav-link {
+  .nav-item,
+  .nav-link {
     position: relative;
-
   }
 
   .nav-list {
@@ -191,7 +227,8 @@ body {
     box-shadow: none;
   }
 
-  .nav-link, li {
+  .nav-link,
+  li {
     margin: 0;
     padding: 1px;
     border: 0px;
@@ -201,7 +238,6 @@ body {
   .nav-link:focus {
     box-shadow: none;
   }
-  
 
   .article-container {
     max-width: 600px;
