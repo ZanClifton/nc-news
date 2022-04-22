@@ -1,3 +1,5 @@
+/* PAGE */
+
 * {
   margin: 1%;
   padding: 0;
@@ -9,6 +11,8 @@ body {
   font-family: "Oxygen", sans-serif;
   color: #3b3a37;
 }
+
+/* HEADER */
 
 a {
   text-decoration: none;
@@ -28,6 +32,8 @@ a {
   text-decoration: none;
   color: #077007;
 }
+
+/* NAVBAR */
 
 .navbar {
   margin: 10px 0px 10px 0px;
@@ -74,6 +80,8 @@ a {
   box-shadow: inset 3px 3px /* 15px */ #022b028c;
 }
 
+/* ARTICLES */
+
 .article-container {
   display: flex;
   flex-direction: column;
@@ -115,6 +123,8 @@ a {
   list-style: none;
 }
 
+/* ARTICLE CARDS */
+
 .card-title a {
   text-decoration: none;
   color: #022b02;
@@ -127,6 +137,8 @@ a {
   color: #077007;
   font-size: 1.005em;
 }
+
+/* SINGLE ARTICLE */
 
 .an-article {
   gap: 30px;
@@ -144,6 +156,8 @@ a {
   padding: 10px;
   color: #022b02;
 }
+
+/* VOTES/ONIONS */
 
 .onion-buttons {
   display: flex;
@@ -165,6 +179,8 @@ a {
 .onion-button:hover {
   background-color: #fefffe;
 }
+
+/* PHONES  */
 
 @media only screen and (max-width: 600px) {
   html {

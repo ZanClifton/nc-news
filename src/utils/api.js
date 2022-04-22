@@ -22,7 +22,7 @@ export const getTopics = () => {
   });
 };
 
-export const getAnArticle = (article_id) => {
+export const getSingleArticle = (article_id) => {
   return shrellyApi.get(`/articles/${article_id}`).then(({ data }) => {
     return data.article;
   });

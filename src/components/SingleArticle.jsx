@@ -1,16 +1,16 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getAnArticle } from "../utils/api";
+import { getSingleArticle } from "../utils/api";
 import { Onions } from "./Onions";
 
-export const AnArticle = () => {
+export const SingleArticle = () => {
   const [article, setArticle] = useState({});
   const { article_id } = useParams();
   const [err, setErr] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    getAnArticle(article_id)
+    getSingleArticle(article_id)
       .then((articleFromApi) => {
         setIsLoading(false);
         setArticle(articleFromApi);
