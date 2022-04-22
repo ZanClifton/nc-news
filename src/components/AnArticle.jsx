@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getAnArticle } from "../utils/api";
+import { Onions } from "./Onions";
 
 export const AnArticle = () => {
   const [article, setArticle] = useState({});
@@ -25,6 +26,14 @@ export const AnArticle = () => {
       <p>{article.author}</p>
       <p>{article.topic}</p>
       <p>{article.body}</p>
+      <div className="article-onions">
+        <Onions
+          votes={article.votes}
+          article_id={article_id}
+          setArticle={setArticle}
+          article={article}
+        />
+      </div>
     </div>
   );
 };
