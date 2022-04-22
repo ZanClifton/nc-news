@@ -14,13 +14,12 @@ export const NavBar = () => {
   return (
     <nav className="navbar">
       <ul className="nav-list">
-        <div className="h1">
-          <h1>Shrelly Mail Online</h1>
+        <div>
+          <Link to="/">
+            <h1 className="site-header">Shrelly Mail Online</h1>
+          </Link>
         </div>
         <div className="nav-links">
-          <Link to="/" className="nav-link">
-            HOME
-          </Link>
           {topics.map((topic) => {
             return (
               <li className="nav-item" key={topic.slug}>

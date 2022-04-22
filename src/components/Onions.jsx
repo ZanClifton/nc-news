@@ -4,16 +4,20 @@ export const Onions = ({ votes, article_id, setArticle, article }) => {
   console.log(article_id);
   const handleOnions = (increment) => {
     setArticle({ ...article, votes: votes + increment });
-    patchOnions(article_id, increment).then(({}) => {
-      // console.log(article_id, increment, "<< article_id, increment");
+    patchOnions(article_id, increment).then(({ data }) => {
+      console.log("That'll do, Donkey. That'll do.");
     });
   };
 
   return (
-    <div className="onion-button">
-      <p>🧅🧅🧅: {votes}</p>
-      <button onClick={() => handleOnions(1)}>Give 🧅</button>
-      <button onClick={() => handleOnions(-1)}>Smash 🧅</button>
+    <div className="onion-buttons">
+      <button className="onion-button" onClick={() => handleOnions(1)}>
+        🎁 GIVE ONION 🧅
+      </button>
+      <div className="onion-counter">🧅🧅🧅 {votes} 🧅🧅🧅</div>
+      <button className="onion-button" onClick={() => handleOnions(-1)}>
+        💥 SMASH ONION 🧅
+      </button>
     </div>
   );
 };

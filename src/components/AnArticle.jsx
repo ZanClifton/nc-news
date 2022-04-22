@@ -7,10 +7,12 @@ export const AnArticle = () => {
   const [article, setArticle] = useState({});
   const { article_id } = useParams();
   const [err, setErr] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     getAnArticle(article_id)
       .then((articleFromApi) => {
+        setIsLoading(false);
         setArticle(articleFromApi);
       })
       .catch((err) => {
@@ -19,6 +21,9 @@ export const AnArticle = () => {
   }, [article_id]);
 
   if (err) return <p>{err}</p>;
+
+  if (isLoading)
+    return <h2 className="article-head">Fetching the good stuff...</h2>;
 
   return (
     <div className="an-article">
