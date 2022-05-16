@@ -164,7 +164,8 @@ a {
 }
 
 .article-body {
-  
+  padding: 1%;
+  box-shadow: 3px 3px #022b028c;
   border: 1px solid black;
 }
 

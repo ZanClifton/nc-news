@@ -15,7 +15,7 @@ export const Comments = ({ article_id }) => {
       .catch((err) => {
         setErr(err);
       });
-  });
+  }, [article_id]);
 
   if (err) return <p>{err}</p>;
 
