@@ -226,6 +226,19 @@ a {
   list-style: none;
 }
 
+/* USERS */
+
+.users {
+  gap: 30px;
+  min-width: 500px;
+  /* width: 80%; */
+  padding: 10px;
+  color: #022b02;
+  background-color: #f4f5f4;
+  border: 1px solid #ddebdd;
+  box-shadow: 3px 3px #022b028c;
+}
+
 /* PHONES  */
 
 @media only screen and (max-width: 600px) {
