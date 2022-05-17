@@ -22,27 +22,27 @@ export const Users = () => {
     );
   return (
     <>
-      <ul className="users">
+      <ul className="user-container">
+        <h2 className="article-head">Select A User</h2>
         <div className="user-list">
-          <h3>Log in as:</h3>
           {users.map((user) => {
             return (
               <li className="user-item" key={user.username}>
-                {user.username}
+                {/* {user.username} */}
                 <Link to="/">
                   <button
-                    className="user-link"
+                    className="user-button"
                     onClick={() => setIsLoggedIn(user)}
                   >
-                    Log In
+                    {user.username}
                   </button>
                 </Link>
                 <Link to="/">
                   <button
-                    className="user-link"
+                    className="user-button"
                     onClick={() => setIsLoggedIn("")}
                   >
-                    Log Out
+                    ❌
                   </button>
                 </Link>
               </li>

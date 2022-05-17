@@ -22,7 +22,7 @@ export const NavBar = () => {
           </Link>
           {console.log(isLoggedIn, "<< NavBar")}
           <h6>
-            <Link to="/login">{isLoggedIn.username}</Link>
+            <Link to="/login">Sign In/Out</Link> {isLoggedIn.username}
           </h6>
         </div>
         <div className="nav-links">

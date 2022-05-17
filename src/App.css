@@ -228,15 +228,49 @@ a {
 
 /* USERS */
 
-.users {
+.user-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #DDEBDD;
+  border: 0.5px solid #022b028c;
+  box-shadow: 3px 3px #022b028c;
+}
+
+.user-list {
+  display: flex;
+  flex-direction: column;
   gap: 30px;
   min-width: 500px;
   /* width: 80%; */
   padding: 10px;
   color: #022b02;
+  font-size: x-large;
+  /* background-color: #f4f5f4;
+  border: 1px solid #ddebdd;
+  box-shadow: 3px 3px #022b028c; */
+}
+
+.user-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  color: #022b02;
   background-color: #f4f5f4;
   border: 1px solid #ddebdd;
   box-shadow: 3px 3px #022b028c;
+  list-style: none;
+}
+
+.user-button {
+  padding: 10px;
+  font-size: larger;
+  background-color: #ddebdd;
+}
+
+.user-button:hover {
+  background-color: #e0f4e0;
 }
 
 /* PHONES  */
