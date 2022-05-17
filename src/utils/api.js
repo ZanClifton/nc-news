@@ -31,7 +31,7 @@ export const getSingleArticle = (article_id) => {
 export const patchOnions = (article_id, increment) => {
   return shrellyApi
     .patch(`/articles/${article_id}`, {
-      inc_votes: increment
+      inc_votes: increment,
     })
     .then((res) => {
       return res.data;
@@ -39,11 +39,13 @@ export const patchOnions = (article_id, increment) => {
 };
 
 export const getComments = (article_id) => {
-  return shrellyApi
-  .get(`/articles/${article_id}/comments`)
-  .then(({ data }) => {
-    console.log(data, "<< data")
-    console.log(data.comments, "<< data.data")
+  return shrellyApi.get(`/articles/${article_id}/comments`).then(({ data }) => {
     return data.comments;
-  })
-}
+  });
+};
+
+export const getUsers = () => {
+  return shrellyApi.get("/users").then(({ data }) => {
+    return data.users;
+  });
+};

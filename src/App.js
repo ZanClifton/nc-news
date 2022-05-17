@@ -1,9 +1,9 @@
-import './App.css';
-import { Routes, Route } from "react-router-dom"
+import "./App.css";
+import { Routes, Route } from "react-router-dom";
 import { NavBar } from "./components/NavBar";
 import { Home } from "./routes/Home";
-import { Article } from "./routes/Article"
-
+import { Article } from "./routes/Article";
+import { LogIn } from "./routes/LogIn";
 
 function App() {
   return (
@@ -13,6 +13,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/articles/:article_id" element={<Article />} />
         <Route path="/topics/:topic" element={<Home />} />
+        <Route path="/login" element={<LogIn />} />
       </Routes>
     </div>
   );
