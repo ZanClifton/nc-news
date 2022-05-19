@@ -4,9 +4,10 @@ import { UserContext } from "../Context/User";
 
 const PostComment = ({ article_id, comments, setComments }) => {
   const { isLoggedIn } = useContext(UserContext);
-  const [comment, setComment] = useState({ username: isLoggedIn, body: "" });
-
-  console.log(comment);
+  const [comment, setComment] = useState({
+    username: isLoggedIn,
+    body: "",
+  });
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -28,12 +29,14 @@ const PostComment = ({ article_id, comments, setComments }) => {
     });
   };
 
-  console.log(setComments);
+  console.log(!!isLoggedIn, "<< !!isLoggedIn");
+  console.log(isLoggedIn);
 
   return (
     <>
       <form className="comment-form" onSubmit={handleSubmit}>
         <input
+          disabled={!isLoggedIn}
           className="comment-input"
           placeholder="Share your thoughts..."
           onChange={(event) => {
@@ -45,7 +48,7 @@ const PostComment = ({ article_id, comments, setComments }) => {
           }}
           value={comment.body}
         />
-        <button type="submit" className="comment-button">
+        <button disabled={!isLoggedIn} type="submit" className="comment-button">
           Post Comment
         </button>
       </form>

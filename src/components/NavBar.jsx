@@ -21,7 +21,8 @@ export const NavBar = () => {
             <h1 className="site-header">Shrelly Mail Online</h1>
           </Link>
           <h6>
-            <Link to="/login">Sign In/Out</Link> {isLoggedIn.username}
+            <Link to="/login">Sign In/Out</Link>{" "}
+            {isLoggedIn && isLoggedIn.username}
           </h6>
         </div>
         <div className="nav-links">

@@ -39,7 +39,7 @@ export const Users = () => {
                 <Link to="/">
                   <button
                     className="user-button"
-                    onClick={() => setIsLoggedIn("")}
+                    onClick={() => setIsLoggedIn(null)}
                   >
                     ❌
                   </button>
