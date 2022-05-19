@@ -32,8 +32,9 @@ const PostComment = ({ article_id, comments, setComments }) => {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form className="comment-form" onSubmit={handleSubmit}>
         <input
+          className="comment-input"
           placeholder="Share your thoughts..."
           onChange={(event) => {
             setComment((currentComment) => ({
@@ -44,7 +45,9 @@ const PostComment = ({ article_id, comments, setComments }) => {
           }}
           value={comment.body}
         />
-        <button type="submit">Post Comment</button>
+        <button type="submit" className="comment-button">
+          Post Comment
+        </button>
       </form>
     </>
   );

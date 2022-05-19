@@ -226,6 +226,26 @@ a {
   list-style: none;
 }
 
+.comment-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-input {
+  width: 98%;
+}
+
+.comment-button {
+  align-self: center;
+  padding: 2px;
+  background-color: #f4f5f4;
+  box-shadow: 3px 3px #022b028c;
+}
+
+.comment-button:hover {
+  background-color: #fefffe;
+}
+
 /* USERS */
 
 .user-container {
@@ -233,7 +253,7 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #DDEBDD;
+  background-color: #ddebdd;
   border: 0.5px solid #022b028c;
   box-shadow: 3px 3px #022b028c;
 }
