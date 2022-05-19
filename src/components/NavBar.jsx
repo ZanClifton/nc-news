@@ -20,7 +20,6 @@ export const NavBar = () => {
           <Link to="/">
             <h1 className="site-header">Shrelly Mail Online</h1>
           </Link>
-          {console.log(isLoggedIn, "<< NavBar")}
           <h6>
             <Link to="/login">Sign In/Out</Link> {isLoggedIn.username}
           </h6>
