@@ -1,6 +1,6 @@
 # ![Shrelly Mail Online](https://github.com/ZanClifton/be-project-nc-news/blob/main/shrelly-mail-online.jpeg)
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?duration=2000&color=3F9748&multiline=true&lines=Zan+Clifton+|+Shrelly+Mail+Online;A+Frontend+News+And+Discussion+Service)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?duration=2000&color=3F9748&multiline=true&lines=Zan+Clifton+|+Shrelly+Mail+Online;A+News+And+Discussion+Site)](https://git.io/typing-svg)
 
 Designed to act as a frontend news service, this project combines with the [Shrelly Mail API](https://shrelly-mail-online.herokuapp.com/api), designed in [a previous project](https://github.com/ZanClifton/shrelly-mail-api), to create a fully functioning website.
 
