@@ -1,7 +1,6 @@
 import { patchOnions } from "../utils/api";
 
 export const Onions = ({ votes, article_id, setArticle, article }) => {
-  console.log(article_id);
   const handleOnions = (increment) => {
     setArticle({ ...article, votes: votes + increment });
     patchOnions(article_id, increment).then(({ data }) => {

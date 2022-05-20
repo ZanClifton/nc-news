@@ -49,3 +49,10 @@ export const getUsers = () => {
     return data.users;
   });
 };
+
+export const postCommentById = (article_id, body, username) => {
+  return shrellyApi.post(`/articles/${article_id}/comments`, {
+    body,
+    username,
+  });
+};

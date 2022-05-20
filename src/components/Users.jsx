@@ -28,7 +28,6 @@ export const Users = () => {
           {users.map((user) => {
             return (
               <li className="user-item" key={user.username}>
-                {/* {user.username} */}
                 <Link to="/">
                   <button
                     className="user-button"
@@ -40,7 +39,7 @@ export const Users = () => {
                 <Link to="/">
                   <button
                     className="user-button"
-                    onClick={() => setIsLoggedIn("")}
+                    onClick={() => setIsLoggedIn(null)}
                   >
                     ❌
                   </button>

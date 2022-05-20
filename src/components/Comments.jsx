@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { getComments } from "../utils/api";
+import PostComment from "./PostComment";
 
 export const Comments = ({ article_id }) => {
   const [comments, setComments] = useState([]);
@@ -29,6 +30,11 @@ export const Comments = ({ article_id }) => {
 
   return (
     <div>
+      <PostComment
+        article_id={article_id}
+        comments={comments}
+        setComments={setComments}
+      />
       <ul className="comments-list">
         {comments.map((comment) => {
           return (
