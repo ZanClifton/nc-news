@@ -29,9 +29,6 @@ const PostComment = ({ article_id, comments, setComments }) => {
     });
   };
 
-  console.log(!!isLoggedIn, "<< !!isLoggedIn");
-  console.log(isLoggedIn);
-
   return (
     <>
       <form className="comment-form" onSubmit={handleSubmit}>
@@ -44,7 +41,6 @@ const PostComment = ({ article_id, comments, setComments }) => {
               ...currentComment,
               body: event.target.value,
             }));
-            console.log(event.target.value);
           }}
           value={comment.body}
         />

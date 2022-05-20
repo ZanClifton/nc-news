@@ -123,6 +123,25 @@ a {
   list-style: none;
 }
 
+.query-container {
+  width: 100%;
+  /* border: 2px solid black; */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* justify-content: center; */
+}
+
+.query {
+  margin: 5px 15px;
+
+}
+
+.query-label {
+  font-size: small;
+  font-weight: bold;
+}
+
 /* ARTICLE CARDS */
 
 .card-title a {

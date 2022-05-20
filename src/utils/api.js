@@ -4,11 +4,13 @@ const shrellyApi = axios.create({
   baseURL: "https://shrelly-mail-online.herokuapp.com/api",
 });
 
-export const getArticles = (topic) => {
+export const getArticles = (topic, sort_by, order) => {
   return shrellyApi
     .get("/articles", {
       params: {
         topic: topic,
+        sort_by: sort_by,
+        order: order,
       },
     })
     .then(({ data }) => {
