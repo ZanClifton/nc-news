@@ -32,7 +32,6 @@ export const Articles = () => {
 
   return (
     <div className="article-container">
-      <h2 className="article-head">What's New?</h2>
       <div className="query-container">
         <div className="query">
           <label className="query-label" forhtml="sort_by">
