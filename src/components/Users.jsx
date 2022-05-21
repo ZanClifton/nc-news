@@ -12,7 +12,6 @@ export const Users = () => {
     getUsers().then((usersFromApi) => {
       setUsers(usersFromApi);
       setIsLoading(false);
-      console.log(usersFromApi);
     });
   }, []);
 

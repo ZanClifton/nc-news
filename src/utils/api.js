@@ -58,3 +58,8 @@ export const postCommentById = (article_id, body, username) => {
     username,
   });
 };
+
+export const deleteComment = (comment_id) => {
+  console.log(comment_id);
+  return shrellyApi.delete(`/comments/${comment_id}`);
+};
