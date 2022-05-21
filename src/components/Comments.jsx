@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { getComments } from "../utils/api";
+import { DeleteComment } from "./DeleteComment";
 import PostComment from "./PostComment";
 
 export const Comments = ({ article_id }) => {
@@ -16,7 +17,7 @@ export const Comments = ({ article_id }) => {
       .catch((err) => {
         setErr(err);
       });
-  }, [article_id]);
+  }, [article_id, comments]);
 
   if (err) return <p>{err}</p>;
 
@@ -42,6 +43,12 @@ export const Comments = ({ article_id }) => {
               <p>{comment.author}</p>
               <p>{comment.body}</p>
               <p>🧅🧅🧅 = {comment.votes}</p>
+              <DeleteComment
+                author={comment.author}
+                comment_id={comment.comment_id}
+                comments={comments}
+                setComments={setComments}
+              />
             </li>
           );
         })}
