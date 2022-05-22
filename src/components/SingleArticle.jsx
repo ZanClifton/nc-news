@@ -3,12 +3,13 @@ import { useParams } from "react-router-dom";
 import { getSingleArticle } from "../utils/api";
 import { Onions } from "./Onions";
 import { Comments } from "./Comments";
+import ErrorPage from "./ErrorPage";
 
 export const SingleArticle = () => {
   const [article, setArticle] = useState({});
   const { article_id } = useParams();
-  const [err, setErr] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     getSingleArticle(article_id)
@@ -17,11 +18,11 @@ export const SingleArticle = () => {
         setArticle(articleFromApi);
       })
       .catch((err) => {
-        setErr(err);
+        setError(err);
       });
   }, [article_id]);
 
-  if (err) return <p>{err}</p>;
+  if (error) return <ErrorPage error={error} />;
 
   if (isLoading)
     return <h2 className="article-head">Fetching the good stuff...</h2>;

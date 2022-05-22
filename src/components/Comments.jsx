@@ -2,11 +2,12 @@ import { useEffect, useState } from "react";
 import { getComments } from "../utils/api";
 import { DeleteComment } from "./DeleteComment";
 import PostComment from "./PostComment";
+import ErrorPage from "./ErrorPage";
 
 export const Comments = ({ article_id }) => {
   const [comments, setComments] = useState([]);
-  const [err, setErr] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     getComments(article_id)
@@ -15,11 +16,11 @@ export const Comments = ({ article_id }) => {
         setComments(commentsFromApi);
       })
       .catch((err) => {
-        setErr(err);
+        setError(err);
       });
   }, [article_id, comments]);
 
-  if (err) return <p>{err}</p>;
+  if (error) return <ErrorPage error={error} />;
 
   if (isLoading)
     return (

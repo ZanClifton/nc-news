@@ -1,6 +1,7 @@
 import { useState, useContext } from "react";
 import { postCommentById } from "../utils/api";
 import { UserContext } from "../Context/User";
+import ErrorPage from "./ErrorPage";
 
 const PostComment = ({ article_id, comments, setComments }) => {
   const { isLoggedIn } = useContext(UserContext);
@@ -8,6 +9,7 @@ const PostComment = ({ article_id, comments, setComments }) => {
     username: isLoggedIn,
     body: "",
   });
+  const [error, setError] = useState(null);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -26,8 +28,12 @@ const PostComment = ({ article_id, comments, setComments }) => {
         },
         ...currComments,
       ];
+    }).catch((err) => {
+      setError(err);
     });
   };
+
+  if (error) return <ErrorPage error={error} />;
 
   return (
     <>
