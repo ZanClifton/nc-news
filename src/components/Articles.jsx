@@ -2,12 +2,13 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useParams, useSearchParams } from "react-router-dom";
 import { getArticles } from "../utils/api";
+import ErrorPage from "./ErrorPage";
 
 export const Articles = () => {
   const [articles, setArticles] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
   const [isLoading, setIsLoading] = useState(true);
-  const [err, setErr] = useState(null);
+  const [error, setError] = useState(null);
 
   const { topic } = useParams();
   const sort_by = searchParams.get("sort_by");
@@ -18,14 +19,14 @@ export const Articles = () => {
       .then((articlesFromApi) => {
         setArticles(articlesFromApi);
         setIsLoading(false);
-        setErr(null);
+        setError(null);
       })
       .catch((err) => {
-        setErr(err);
+        setError(err);
       });
   }, [topic, sort_by, order]);
 
-  if (err) return <p>{err}</p>;
+  if (error) return <ErrorPage error={error} />;
 
   if (isLoading)
     return <h2 className="article-head">Fetching the good stuff...</h2>;

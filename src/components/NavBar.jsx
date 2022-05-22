@@ -2,16 +2,24 @@ import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { getTopics } from "../utils/api";
 import { UserContext } from "../Context/User";
+import ErrorPage from "./ErrorPage";
 
 export const NavBar = () => {
-  const [topics, setTopics] = useState([]);
   const { isLoggedIn } = useContext(UserContext);
+  const [topics, setTopics] = useState([]);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    getTopics().then((topicsFromApi) => {
-      setTopics(topicsFromApi);
-    });
+    getTopics()
+      .then((topicsFromApi) => {
+        setTopics(topicsFromApi);
+      })
+      .catch((err) => {
+        setError(err);
+      });
   }, []);
+
+  if (error) return <ErrorPage error={error} />;
 
   return (
     <nav className="navbar">

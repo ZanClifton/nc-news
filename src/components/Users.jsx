@@ -2,18 +2,26 @@ import { useEffect, useState, useContext } from "react";
 import { getUsers } from "../utils/api";
 import { Link } from "react-router-dom";
 import { UserContext } from "../Context/User";
+import ErrorPage from "./ErrorPage";
 
 export const Users = () => {
   const [users, setUsers] = useState([]);
   const [isLoading, setIsLoading] = useState();
   const { setIsLoggedIn } = useContext(UserContext);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    getUsers().then((usersFromApi) => {
-      setUsers(usersFromApi);
-      setIsLoading(false);
-    });
+    getUsers()
+      .then((usersFromApi) => {
+        setUsers(usersFromApi);
+        setIsLoading(false);
+      })
+      .catch((err) => {
+        setError(err);
+      });
   }, []);
+
+  if (error) return <ErrorPage error={error} />;
 
   if (isLoading)
     return (
