@@ -6,8 +6,8 @@ Designed to act as a frontend news service, this project combines with the [Shre
 
 Existing users are able to browse articles by topic, as well as to join discussions by commenting on them. A 'vote' feature is enabled for users to quickly respond to articles they liked or disliked. Further functionality is planned, including creating new articles, users and topics, voting on comments, and more!
 
-<!-- ### [I've hosted it on Heroku; try it out now!](https://shrelly-mail-online.herokuapp.com/api)
-[![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white)](https://shrelly-mail-online.herokuapp.com/api) -->
+### [I've hosted it on Netlify; try it out now!](https://shrellymailonline.netlify.app/)
+![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7)
 
 ## Creating A Local Copy
 
