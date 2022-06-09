@@ -43,5 +43,5 @@ The above commands will also enable you to check your own versions in the termin
 <div align=right>
   <h6> Project created with thanks to: <a href="https://northcoders.com/">Northcoders</a>
   <p>README.md created with thanks to: <br>ReadMe Typing SVG | <a href="https://git.io/typing-svg">DenverCoder1</a>  
-    <br>Badges | <a href="https://shields.io/">Shields IO</a></h6></p> 
+  <br>Markdown Badges: <a href="https://github.com/Ileriayo/markdown-badges">Ileriayo</a></h6>
 </div>
